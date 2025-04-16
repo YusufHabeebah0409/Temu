@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Redo 3</h3>
+    <input type="text" placeholder="Enter product" id="product">
+    <button onclick="addItem()">Add Item</button>
+    <div id="show">Your Product will show here </div>
+
+    <script>
+        const cart =[]
+        const addItem = () =>{
+            if(product.value === ""){
+              alert("Please Input a Product")
+            }else{
+                cart.push(product.value)
+                document.getElementById("product").value = ""
+                console.log(cart);
+                display()
+            }
+        }
+        const display = () => {
+            show.innerHTML =""
+                for(let i=0;i<cart.length;i++){
+                     show.innerHTML +=`
+                     <p>${i+1}.${cart[i]}</p>
+                     `
+                }
+        }
+    </script>
+</body>
+</html>
