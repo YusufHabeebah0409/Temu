@@ -8,8 +8,11 @@
 <body>
     <div>
         <h3>Temu Express</h3>
+        <p style="display: none;" class="alert alert-danger text-center p-2" id="errorMsg">Input something </p>
         <input type="text" placeholder="Add items here" id="item">
         <button onclick="addItem()">Add</button>
+        <button id="btnDelete" style="display: none;" onclick="deleteAnyItem()">Delete any Item</button>
+
         <div id="show"></div>
     </div>
 

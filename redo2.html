@@ -23,8 +23,8 @@
             document.getElementById('item').value = ""
 
             showItem.innerHTML = ""
-            cart.map((index) => {
-              showItem.innerHTML +=`<p>${index}</p>`
+            cart.map((data, index) => {
+              showItem.innerHTML +=`<p> ${index+1}. ${data}</p>`
             })
         }
         
