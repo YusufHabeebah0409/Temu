@@ -6,6 +6,9 @@ const itemAdd = () => {
     }else{
         errorMsg.style.display = 'none'
         delProduct.style.display = 'block'
+        delFirstProduct.style.display = 'block'
+        delLastProduct.style.display = 'block'
+        editProduct.style.display = 'block'
         cart.push(product.value)
         console.log(cart); 
         document.getElementById('product').value =""
@@ -14,15 +17,36 @@ const itemAdd = () => {
 }
 
 const itemDelete = () => {
-    if(cart.length >=1){
         const nothing = Number(prompt("What number do u want to delete"))
         cart.splice(nothing+1, 1)
         disp()
-        if(cart.length < 1){
-          delProduct.style.display = 'none'
-        }
-    }
         
+}
+
+
+const itemEdit = () => {
+    const editNumber = Number(prompt("what number do u want to edit"))
+    const editEdit = prompt(" Your New Product ")
+    if(editEdit === ""){
+        // errorMsg.style.display = 'block'
+        alert('Input a New Product')
+    }else{
+        cart.splice(editNumber,1, editEdit)
+        disp()
+    }
+    
+}
+
+
+
+const itemFirstDelete = () => {
+    cart.shift(0)
+    disp()
+}
+
+const itemLastDelete = () => {
+    cart.pop()
+    disp()
 }
 const disp = () => {
     show.innerHTML = ""
