@@ -40,7 +40,7 @@ const itemEdit = () => {
 
 
 const itemFirstDelete = () => {
-    cart.shift(0)
+    cart.shift()
     disp()
 }
 
