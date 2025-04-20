@@ -1,11 +1,12 @@
 const cart = []
 const itemAdd = () => {
-    if(product.value ==='' ){
+    if(product.value.trim() ==='' ){
     //    alert("Input a product")
        errorMsg.style.display = 'block'
-    }else if(/^\s*$/.test(product.value)){
-        alert("Input a product")
-    }else{
+    }
+    // else if(/^\s*$/.test(product.value)){
+        // alert("Input a product")
+    else{
         errorMsg.style.display = 'none'
         delProduct.style.display = 'block'
         delFirstProduct.style.display = 'block'
